@@ -1,0 +1,19 @@
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS variable_demo $$
+
+CREATE PROCEDURE variable_demo()
+BEGIN
+	DECLARE my_integer INT;
+	DECLARE my_big_integer BIGINT;
+	DECLARE my_currency NUMERIC(8,2);
+	DECLARE my_pi FLOAT DEFAULT 3.1415926;
+	DECLARE my_text TEXT;
+	DECLARE my_date DATE DEFAULT '1994-07-12';
+	DECLARE my_varchar VARCHAR(30) DEFAULT 'Hello World';
+	SET my_integer=20;
+	SET my_big_integer=POWER(my_integer,3);
+	SELECT my_integer,my_big_integer,my_pi,my_varchar,my_date;
+END$$
+
+DELIMITER ;
