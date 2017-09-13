@@ -1,0 +1,11 @@
+
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS helloworld $$
+CREATE PROCEDURE helloworld()
+BEGIN
+SELECT * from t;
+END
+$$
+
+DELIMITER ;
